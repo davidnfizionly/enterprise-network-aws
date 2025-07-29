@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enterprise Network Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🌐 Enterprise Network Dashboard</h1>
+  <div class="network-map">
+    <div class="zone public">
+      <h2>Public Subnet</h2>
+      <p>☁️ Bastion Host</p>
+      <button onclick="simulateAccess('bastion')">Access Bastion</button>
+    </div>
+    <div class="zone private-app">
+      <h2>Private App Subnet</h2>
+      <p>🖥️ App Server</p>
+      <button onclick="simulateAccess('vpn')">Access via VPN</button>
+    </div>
+    <div class="zone private-db">
+      <h2>Private DB Subnet</h2>
+      <p>🗄️ DB Server</p>
+      <button onclick="simulateAccess('blocked')">Simulate Hacker Access</button>
+    </div>
+  </div>
+  <div id="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
